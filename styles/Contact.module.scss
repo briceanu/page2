@@ -1,0 +1,24 @@
+.contact_section {
+  // background-color: rgb(136, 33, 119);
+  // color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  width: 100vw;
+}
+.hero_text {
+  margin: auto;
+  font-size: clapm(1.4rem, 2vw, 3rem);
+  // color: white;
+}
+.light {
+  color: rgb(99, 80, 80);
+  background-color: rgb(224, 233, 224);
+  transition: all 300ms ease-in-out;
+}
+.dark {
+  color: rgb(255, 255, 255);
+  background-color: rgb(133, 125, 125);
+  transition: all 300ms ease-in-out;
+}

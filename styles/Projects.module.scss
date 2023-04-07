@@ -1,0 +1,14 @@
+.projects_section {
+  // background-color: rgb(33, 90, 136);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  width: 100vw;
+}
+.hero_text {
+  margin: auto;
+  font-size: clamp(1.4rem, 2vw, 3rem);
+  transition: all 300ms ease-in-out;
+  // color: white;
+}

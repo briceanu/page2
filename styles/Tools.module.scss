@@ -1,0 +1,28 @@
+.tools_section {
+  background-color: rgb(158, 172, 33);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100dvh;
+  width: 100vw;
+}
+
+.hero_text {
+  margin: auto;
+  font-size: clapm(1.4rem, 2vw, 3rem);
+  // color: white;
+}
+// @media (prefers-color-scheme: light) {
+//   .tools_section {
+//     color: #bcd;
+//     background: #334;
+//     // outline: 5px dotted #000;
+//   }
+// }
+// @media (prefers-color-scheme: light) {
+//   .tools_section {
+//     background: #bcd;
+//     color: #334;
+//     // outline: 5px dotted #000;
+//   }
+// }
