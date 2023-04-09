@@ -8,7 +8,7 @@ import close from '../public/close.svg';
 import { useTheme } from 'next-themes';
 import { BsFillMoonStarsFill } from 'react-icons/bs';
 import { FaSun } from 'react-icons/fa';
-import { inter, cormorantGaramond, lobster } from '../styles/fonts';
+import { inter, lobster } from '../styles/fonts';
 
 const NavBar = () => {
   const [mounted, setMounted] = useState(false);
@@ -26,7 +26,11 @@ const NavBar = () => {
   return (
     <div>
       <nav className={styles.navbar}>
-        <div className={styles.nav}>
+        <div
+          className={`${styles.nav} ${
+            theme === 'light' ? styles.dark : styles.light
+          }`}
+        >
           <div className={styles.logo}>
             <Link href='#home' scroll={false}>
               <h2 className={`${styles.text_logo} ${lobster.className}`}>TB</h2>

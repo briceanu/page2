@@ -6,6 +6,8 @@ import teo from '../public/teo.jpeg';
 import Image from 'next/image';
 import MediaContainer from './MediaContainer';
 import Button from './Button';
+import { inter } from '../styles/fonts';
+
 const Home = () => {
   const { resolvedTheme } = useTheme();
   return (
@@ -13,9 +15,8 @@ const Home = () => {
       id='home'
       className={`${styles.home_section} ${
         resolvedTheme === 'dark' ? styles.dark : styles.light
-      }`}
+      }   ${inter.className}`}
     >
-      {/* <main id='home' className={styles.main_container}> */}
       <div className={styles.text_social}>
         <div className={styles.home_intro}>
           <h2>Hi,</h2>
@@ -37,7 +38,6 @@ const Home = () => {
         height={300}
         alt={teo}
       />
-      {/* </main> */}
     </section>
   );
 };

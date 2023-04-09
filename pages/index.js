@@ -1,12 +1,12 @@
 import Head from 'next/head';
-import { Inter } from 'next/font/google';
+// import { Inter } from 'next/font/google';
 import NavBar from '@/components/NavBar';
 import Home from '@/components/Home';
 import About from '@/components/About';
 import Tools from '@/components/Tools';
 import Projects from '@/components/Projects';
 import Contact from '@/components/Contact';
-const inter = Inter({ subsets: ['latin'] });
+// const inter = Inter({ subsets: ['latin'] });
 export default function App() {
   return (
     <>

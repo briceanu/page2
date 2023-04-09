@@ -1,23 +1,40 @@
-import { React, useEffect } from 'react';
+import { React } from 'react';
 import styles from '../styles/About.module.scss';
 import Image from 'next/image';
 import atDesk from '../public/atDesk.webp';
 import { useTheme } from 'next-themes';
+import { useInView } from 'react-intersection-observer';
+import { inter } from '../styles/fonts';
 const About = () => {
+  const { ref: ImgRef, inView: myElementIsVisible } = useInView({
+    threshold: 0,
+  });
+  const { ref: TextRef, inView: containterVisible } = useInView({
+    threshold: 0,
+  });
   const { resolvedTheme } = useTheme();
+
   return (
     <section
       id='about'
       className={`${styles.about_section} ${
         resolvedTheme === 'dark' ? styles.dark : styles.light
-      }`}
+      }  ${inter.className}`}
     >
-      <div className={styles.container}>
-        <Image src={atDesk} alt='working at desk' className={styles.img} />
+      <div className={`${styles.container} `}>
+        <Image
+          ref={ImgRef}
+          src={atDesk}
+          alt='working at desk'
+          className={`${styles.img} ${
+            myElementIsVisible && styles.img_animation
+          } `}
+        />
         <div
-          className={styles.description}
-          data-aos='fade-left'
-          data-aos-delay='200'
+          ref={TextRef}
+          className={`${styles.description} ${
+            containterVisible && styles.container_animation
+          }   `}
         >
           <h1 className={styles.about}>About me</h1>
           <p>
