@@ -6,6 +6,12 @@
   min-height: 100dvh;
   gap: 2rem;
   font-family: 'Cormorant Garamond', serif;
+  //
+  background-image: url(../public/code3.jpg);
+  background-position: right;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .hero_text {

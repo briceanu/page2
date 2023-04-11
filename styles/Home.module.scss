@@ -5,6 +5,8 @@
   justify-content: space-around;
   min-height: 100dvh;
   width: 100vw;
+
+  //
 }
 
 .hero_text {
@@ -164,5 +166,10 @@
   .home_intro {
     width: 100vw;
     margin-left: 2rem;
+  }
+}
+@media (max-width: 400px) {
+  .home_intro {
+    margin: 1rem;
   }
 }

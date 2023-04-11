@@ -22,14 +22,6 @@ const About = () => {
       }  ${inter.className}`}
     >
       <div className={`${styles.container} `}>
-        <Image
-          ref={ImgRef}
-          src={atDesk}
-          alt='working at desk'
-          className={`${styles.img} ${
-            myElementIsVisible && styles.img_animation
-          } `}
-        />
         <div
           ref={TextRef}
           className={`${styles.description} ${
@@ -50,6 +42,14 @@ const About = () => {
             ride my bike and to cook.
           </p>
         </div>
+        <Image
+          ref={ImgRef}
+          src={atDesk}
+          alt='working at desk'
+          className={`${styles.img} ${
+            myElementIsVisible && styles.img_animation
+          } `}
+        />
       </div>
     </section>
   );
