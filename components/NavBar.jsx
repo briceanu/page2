@@ -17,7 +17,7 @@ const NavBar = () => {
   useEffect(() => {
     setMounted(true);
   }, []);
-  const [navbar, setNavbar] = useState(false);
+  const [navbar, setNavbar] = useState(true);
 
   if (!mounted) {
     return null;
