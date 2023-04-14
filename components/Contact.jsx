@@ -74,7 +74,7 @@ const Contact = () => {
 
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
-      console.error(error);
+      // console.error(error);
     }
   }, [formData]);
 
