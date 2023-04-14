@@ -10,6 +10,7 @@ import linkedinDark from '../public/social_media/linkedinDark.svg';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Image from 'next/image';
+import { sendContactForm } from '@/lib/api';
 
 const Contact = () => {
   const { resolvedTheme } = useTheme();
@@ -88,6 +89,7 @@ const Contact = () => {
     ) {
       setIsSubmit(true);
     }
+    await sendContactForm(formData);
   };
 
   useEffect(() => {
@@ -175,6 +177,9 @@ const Contact = () => {
             Send message
           </button>
         </form>
+        <footer className={styles.footer}>
+          Copyright &copy; {new Date().getFullYear()} Briceanu Teodor
+        </footer>
       </div>
       <ToastContainer />
     </section>

@@ -21,15 +21,16 @@
 .main_container {
   @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300&display=swap');
   font-family: 'Rubik', sans-serif;
-  transition: all 0.5s ease;
+  transition: all 0.3s ease-in-out;
   display: grid;
-  grid-template: repeat(1, 1fr) / repeat(2, 1fr);
+  grid-template: 1fr 80px / repeat(2, 1fr);
   gap: 2rem;
   padding: 2rem;
   min-height: 92vh;
   font-size: clamp(2.5rem, 1vw, 1.5rem);
   letter-spacing: 0.1rem;
   overflow: hidden;
+  // background-color: palevioletred;
 }
 
 .text_container {
@@ -120,13 +121,16 @@
     border: 2px solid white;
     border-radius: 5px;
     outline: none;
-
-    transition: all 0.5s ease;
+    transition: all 0.3s ease-in-out;
     padding: 12px 25px;
     position: relative;
     transform: translateZ(0);
     font-weight: 900;
     cursor: pointer;
+    &:hover {
+      opacity: 0.9;
+      background-color: darken($color: white, $amount: 20);
+    }
   }
 
   input.input_error {
@@ -150,11 +154,12 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  transition: all 0.3s ease-in-out;
 
   img {
     width: 40px;
     height: 40px;
-    transition: all 500ms ease-in-out;
+    transition: all 300ms ease-in-out;
     &:hover {
       scale: 1.1;
     }
@@ -192,6 +197,18 @@
     }
   }
 }
+.footer {
+  grid-area: 2/1/3/-1;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  // position: absolute;
+  bottom: 20px;
+  width: 50%;
+  margin: auto;
+  // background-color: lime;
+}
+
 @media (max-width: 768px) {
   .text_container {
     grid-area: 1/1/2/3;
@@ -200,6 +217,11 @@
   }
   .form {
     grid-area: 2/1/3/3;
+  }
+  .footer {
+    grid-area: 3/1/4/3;
+    // bottom: 10px;
+    margin-top: 1rem;
   }
 }
 @media (max-width: 400px) {
@@ -210,5 +232,9 @@
   }
   .form {
     grid-area: 2/1/3/3;
+  }
+  .footer {
+    bottom: 10px;
+    margin-bottom: 30px;
   }
 }
