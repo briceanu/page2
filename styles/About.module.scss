@@ -70,6 +70,7 @@ h1.about {
     height: 400px;
     transition: all 0.3s ease-in-out;
     border-radius: 10px;
+    opacity: 0;
     transform: translateX(-450px);
     // grid-column: 3/-1;
   }

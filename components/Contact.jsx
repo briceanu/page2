@@ -47,7 +47,7 @@ const Contact = () => {
 
   const handleFormSubmit = useCallback(async () => {
     try {
-      const response = await fetch('/api/contact', {
+      const response = await fetch('#contact', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ const Contact = () => {
 
       setFormData({ name: '', email: '', message: '' });
     } catch (error) {
-      // console.error(error);
+      console.error(error);
     }
   }, [formData]);
 
